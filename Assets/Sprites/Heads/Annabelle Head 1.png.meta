@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 325b8ac0555a44a3e9d7f7fd2aff9fe6
+guid: c4c102a51e205402ab0b6e39d157565b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -368879610988348978
-    second: Annie Head_0
+      213: -186993992440166913
+    second: Annabelle Head 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Annie Head_0
+      name: Annabelle Head 1_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 0
-        width: 949
-        height: 1172
+        x: 4
+        y: 3
+        width: 948
+        height: 1047
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec9b72eb2f971eaf0800000000000000
-      internalID: -368879610988348978
+      spriteID: ff5c87164f9a76df0800000000000000
+      internalID: -186993992440166913
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Annabelle Head 1_0: -186993992440166913
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

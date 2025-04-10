@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1da18a6e25d9d42858a60a20dda2a76d
+guid: 2c010de6816c245a0a6d1dbc0f38ca5b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8413849269669003472
-    second: Race Track 2 Combined_0
+      213: -4285730750347659448
+    second: Coral Head 3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Race Track 2 Combined_0
+      name: Coral Head 3_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 10
         y: 0
-        width: 5586
-        height: 1241
+        width: 540
+        height: 784
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 03ff2bfeaa00c3b80800000000000000
-      internalID: -8413849269669003472
+      spriteID: 8473f8ed6960684c0800000000000000
+      internalID: -4285730750347659448
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Race Track 2 Combined_0: -8413849269669003472
+      Coral Head 3_0: -4285730750347659448
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

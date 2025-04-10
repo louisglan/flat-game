@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d6069b386e8a240098f13827294992b2
+guid: db9f6f3687d2843ba9d4823a80eb8702
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7752187677852017858
-    second: Stuie Head_0
+      213: 7579841133020115425
+    second: Coral Head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stuie Head_0
+      name: Coral Head_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 8
-        width: 337
-        height: 500
+        x: 6
+        y: 9
+        width: 174
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c4a782ce9d459b60800000000000000
-      internalID: 7752187677852017858
+      spriteID: 1e1fe8bc951013960800000000000000
+      internalID: 7579841133020115425
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Coral Head_0: 7579841133020115425
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

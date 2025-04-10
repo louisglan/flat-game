@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c4c102a51e205402ab0b6e39d157565b
+guid: 61b9a9c3cdf4a054fb2e5b01bf827a23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -186993992440166913
-    second: Annabelle Head 1_0
+      213: 8588711110826529078
+    second: Zelda Head 4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Annabelle Head 1_0
+      name: Zelda Head 4_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 3
-        width: 948
-        height: 1047
+        x: 15
+        y: 9
+        width: 463
+        height: 451
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff5c87164f9a76df0800000000000000
-      internalID: -186993992440166913
+      spriteID: 6311447104b313770800000000000000
+      internalID: 8588711110826529078
       vertices: []
       indices: 
       edges: []

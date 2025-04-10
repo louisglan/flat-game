@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b0f33f770d382424bb49cf73e64d17b7
+guid: 52d55a6e84e8a46d8889b6b8c504a486
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8632451458229114277
-    second: Ted Head_0
+      213: -6117449701072974751
+    second: Frankie Head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ted Head_0
+      name: Frankie Head_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 11
-        width: 266
-        height: 339
+        y: 7
+        width: 173
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5a637ba22f533880800000000000000
-      internalID: -8632451458229114277
+      spriteID: 16cc93498e37a1ba0800000000000000
+      internalID: -6117449701072974751
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Frankie Head_0: -6117449701072974751
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

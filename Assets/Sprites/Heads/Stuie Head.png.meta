@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d4760a015844b42d3826ee903c1f3511
+guid: d6069b386e8a240098f13827294992b2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -89621482079687690
-    second: Zelda Head 2_0
+      213: 7752187677852017858
+    second: Stuie Head_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zelda Head 2_0
+      name: Stuie Head_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 5
-        width: 280
-        height: 462
+        x: 12
+        y: 8
+        width: 337
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fb6564acb991cef0800000000000000
-      internalID: -89621482079687690
+      spriteID: 2c4a782ce9d459b60800000000000000
+      internalID: 7752187677852017858
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Stuie Head_0: 7752187677852017858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

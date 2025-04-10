@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41c7d0c659b82403c9d2d8834354e079
+guid: 147fb9fcc24a56a49994e30b1640033b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7344391529299000658
-    second: Zelda Head 3_0
+      213: 5199979006384268662
+    second: Star_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Zelda Head 3_0
+      name: Star_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 7
-        width: 212
-        height: 251
+        x: 169
+        y: 28
+        width: 1604
+        height: 1232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25d31430f258ce560800000000000000
-      internalID: 7344391529299000658
+      spriteID: 675e50b0b590a2840800000000000000
+      internalID: 5199979006384268662
       vertices: []
       indices: 
       edges: []

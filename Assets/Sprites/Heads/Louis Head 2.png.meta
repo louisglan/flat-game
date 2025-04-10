@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 52d55a6e84e8a46d8889b6b8c504a486
+guid: 004a38d345f974820b89bae384674831
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6117449701072974751
-    second: Frankie Head_0
+      213: 636235162255564586
+    second: Louis Head 2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frankie Head_0
+      name: Louis Head 2_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 7
-        width: 173
-        height: 231
+        x: 11
+        y: 8
+        width: 336
+        height: 484
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16cc93498e37a1ba0800000000000000
-      internalID: -6117449701072974751
+      spriteID: a2f1bd7528c54d800800000000000000
+      internalID: 636235162255564586
       vertices: []
       indices: 
       edges: []
@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Louis Head 2_0: 636235162255564586
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
