@@ -32,6 +32,9 @@ public class Banana : MonoBehaviour
             _rb2d.linearVelocity = new Vector2(0f, MaxSpeed / 3);
             _rb2d.angularVelocity = 0f;
             other.gameObject.GetComponent<Collider2D>().enabled = true;
+        } else if (other.gameObject.CompareTag("Finish Line"))
+        {
+            Time.timeScale = 0f;
         }
     }
 }
