@@ -3,10 +3,11 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private readonly float _moveSpeed = 5f;
+    public string inputNameHorizontal;
 
     void Update()
     {
-        var moveHorizontal = Input.GetAxisRaw("Horizontal");
+        var moveHorizontal = Input.GetAxis(inputNameHorizontal);
         var movement = new Vector3(moveHorizontal, 0, 0);
         if (!IsLeavingBounds(movement))
         {
@@ -19,5 +20,10 @@ public class PlayerMovement : MonoBehaviour
         float halfScreenWidth = 10.2f;
         return transform.position.x < -halfScreenWidth && movement.x < 0
                || transform.position.x > halfScreenWidth && movement.x > 0;
+    }
+
+    public void SetInputNameHorizontal(string inputName)
+    {
+        inputNameHorizontal = inputName;
     }
 }

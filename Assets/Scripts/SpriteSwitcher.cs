@@ -4,19 +4,30 @@ public class SpriteSwitcher : MonoBehaviour
 {
     public Sprite normalSprite;
     public Sprite hoverSprite;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer _spriteRenderer;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     public void OnMouseEnter()
     {
-        spriteRenderer.sprite = hoverSprite;
+        UseHoverSprite();
     }
 
-    public void OnMouseExit() {
-        spriteRenderer.sprite = normalSprite;
-    } 
+    public void OnMouseExit()
+    {
+        UseNormalSprite();
+    }
+
+    public void UseHoverSprite()
+    {
+        _spriteRenderer.sprite = hoverSprite;
+    }
+
+    public void UseNormalSprite()
+    {
+        _spriteRenderer.sprite = normalSprite;
+    }
 }
