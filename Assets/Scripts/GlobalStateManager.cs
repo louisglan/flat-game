@@ -8,11 +8,13 @@ namespace DefaultNamespace
         
         public GameMode gameMode = GameMode.SinglePlayer;
         public bool isGameOver;
+        public float highScore;
         public int selectedCharacterPlayer1;
         public int selectedCharacterPlayer2;
 
         private void Awake()
         {
+            ResetState();
             if (Instance == null)
             {
                 Instance = this;
@@ -28,6 +30,7 @@ namespace DefaultNamespace
         {
             gameMode = GameMode.SinglePlayer;
             isGameOver = false;
+            highScore = 10000f;
             selectedCharacterPlayer1 = 0;
             selectedCharacterPlayer2 = 0;
         }

@@ -1,14 +1,17 @@
+using DefaultNamespace;
 using scene.racetrack;
+using System;
 using TMPro;
 using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText;
-    private float _elapsedTime;
+    TextMeshProUGUI timerText;
+    public float elapsedTime { private set; get; }
 
     private void OnEnable()
     {
+        timerText = GetComponent<TextMeshProUGUI>();
         ResetTimer();
         FinishGameMenu.OnRestartGame += ResetTimer;
     }
@@ -20,12 +23,17 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        _elapsedTime += Time.deltaTime;
-        timerText.text = _elapsedTime.ToString("0.00");
+        elapsedTime += Time.deltaTime;
+        timerText.text = elapsedTime.ToString("0.00");
     }
 
     private void ResetTimer()
     {
-        _elapsedTime = 0f;
+        elapsedTime = 0f;
+    }
+
+    public string GetFormattedTimerText()
+    {
+        return timerText.text;
     }
 }

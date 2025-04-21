@@ -1,5 +1,6 @@
 using System;
 using DefaultNamespace;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -10,26 +11,29 @@ namespace scene.racetrack
     public class FinishGameMenu : MonoBehaviour
     {
         public static event Action OnRestartGame;
-        public GameObject mainMenuButtonGameObject;
+        public TextMeshProUGUI playerScoreText;
+        public TextMeshProUGUI highScoreText;
+        [SerializeField] private GameObject mainMenuButtonGameObject;
         private Button _mainMenuButtonComponent;
-        public GameObject restartButtonGameObject;
+        [SerializeField] private GameObject restartButtonGameObject;
         private Button _restartButtonComponent;
         private bool _isPlayer1Selecting;
         private bool _isPlayer2Selecting;
         private bool _isMainMenuSelected = true;
         
         void OnEnable()
-            {
-                _mainMenuButtonComponent = mainMenuButtonGameObject.GetComponent<Button>();
-                _restartButtonComponent = restartButtonGameObject.GetComponent<Button>();
-                Reset();
-            }
-        
+        {
+            _mainMenuButtonComponent = mainMenuButtonGameObject.GetComponent<Button>();
+            _restartButtonComponent = restartButtonGameObject.GetComponent<Button>();
+            Reset();
+        }
+
         void Reset()
         {
             EventSystem.current.SetSelectedGameObject(null);
             _mainMenuButtonComponent.Select();
         }
+
     
         void Update()
         {
