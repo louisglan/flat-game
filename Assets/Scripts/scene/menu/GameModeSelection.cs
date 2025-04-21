@@ -28,7 +28,7 @@ public class GameModeSelection : MonoBehaviour
 
     void Update()
     {
-        var verticalInput1 = Input.GetAxis("Vertical1");
+        var verticalInput1 = Input.GetAxisRaw("Vertical1");
         if (verticalInput1 != 0)
         {
             NavigateVertically();
@@ -46,9 +46,9 @@ public class GameModeSelection : MonoBehaviour
         }
         if (isSubmit && !_isSubmitting)
         {
+            GlobalStateManager.Instance.gameMode = _isSinglePlayer ? GameMode.SinglePlayer : GameMode.MultiPlayer;
             OnGameModeSelection?.Invoke();
             gameObject.SetActive(false);
-            GlobalStateManager.Instance.gameMode = _isSinglePlayer ? GameMode.SinglePlayer : GameMode.MultiPlayer;
         }
     }
 

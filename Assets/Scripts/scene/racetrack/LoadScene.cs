@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using DefaultNamespace;
+using scene.racetrack;
 using UnityEngine;
 
 public class LoadScene : MonoBehaviour
@@ -11,8 +14,41 @@ public class LoadScene : MonoBehaviour
     public GameObject multiPlayerGround;
     public GameObject singlePlayerGround;
     public GameObject FinishGameMenuUI;
-    
+    private List<GameObject> _bananas;
+    private List<GameObject> _players;
+
     void Start()
+    {
+        _bananas = new List<GameObject>();
+        _players = new List<GameObject>();
+        LoadPlayers();
+    }
+    
+    void OnEnable()
+    {
+        FinishGameMenu.OnRestartGame += Reset;
+    }
+    
+    void OnDisable()
+    {
+        FinishGameMenu.OnRestartGame -= Reset;
+    }
+
+    private void Reset()
+    {
+        foreach (var player in _players)
+        {
+            Destroy(player);
+        }
+
+        foreach (var banana in _bananas)
+        {
+            Destroy(banana);
+        }
+        LoadPlayers();
+    }
+
+    private void LoadPlayers()
     {
         var isSinglePlayerMode = GlobalStateManager.Instance.gameMode == GameMode.SinglePlayer;
         if (isSinglePlayerMode)
@@ -33,9 +69,11 @@ public class LoadScene : MonoBehaviour
     {
         var player = Instantiate(characters[PlayerPrefs.GetInt($"selectedCharacterPlayer{playerNumber}")], spawnPosition, Quaternion.identity);
         var playerMovement = player.AddComponent<PlayerMovement>();
+        _players.Add(player);
         playerMovement.SetInputNameHorizontal($"Horizontal{playerNumber}");
         var banana = Instantiate(bananaPrefab, spawnPosition + new Vector3(0, 2f, 0), Quaternion.identity);
         var bananaScript = banana.AddComponent<Banana>();
         bananaScript.FinishGameMenuUI = FinishGameMenuUI;
+        _bananas.Add(banana);
     }
 }

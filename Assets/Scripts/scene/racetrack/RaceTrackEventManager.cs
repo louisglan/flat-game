@@ -2,15 +2,20 @@ using UnityEngine;
 
 public class RaceTrackEventManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject finishGameMenuUI;
+
+    void OnEnable()
     {
-        
+        Banana.OnGameOver += LoadFinishGameMenu;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+        Banana.OnGameOver -= LoadFinishGameMenu;
+    }
+
+    private void LoadFinishGameMenu()
+    {
+        finishGameMenuUI.SetActive(true);
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -6,23 +7,23 @@ using Button = UnityEngine.UI.Button;
 
 namespace scene.racetrack
 {
-    public class PauseMenu : MonoBehaviour
+    public class FinishGameMenu : MonoBehaviour
     {
-        public static event Action OnResumeGame;
+        public static event Action OnRestartGame;
         public GameObject mainMenuButtonGameObject;
         private Button _mainMenuButtonComponent;
-        public GameObject resumeButtonGameObject;
-        private Button _resumeButtonComponent;
+        public GameObject restartButtonGameObject;
+        private Button _restartButtonComponent;
         private bool _isPlayer1Selecting;
         private bool _isPlayer2Selecting;
         private bool _isMainMenuSelected = true;
         
         void OnEnable()
-        {
-            _mainMenuButtonComponent = mainMenuButtonGameObject.GetComponent<Button>();
-            _resumeButtonComponent = resumeButtonGameObject.GetComponent<Button>();
-            Reset();
-        }
+            {
+                _mainMenuButtonComponent = mainMenuButtonGameObject.GetComponent<Button>();
+                _restartButtonComponent = restartButtonGameObject.GetComponent<Button>();
+                Reset();
+            }
         
         void Reset()
         {
@@ -57,7 +58,9 @@ namespace scene.racetrack
             }
             else
             {
-                OnResumeGame?.Invoke();
+                Time.timeScale = 1f;
+                GlobalStateManager.Instance.isGameOver = false;
+                OnRestartGame?.Invoke();
             }
             Reset();
         }
@@ -76,7 +79,7 @@ namespace scene.racetrack
             }
             else
             {
-                _resumeButtonComponent.Select();
+                _restartButtonComponent.Select();
             }
         }
     }

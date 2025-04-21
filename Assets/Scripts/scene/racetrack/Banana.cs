@@ -1,4 +1,5 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Banana : MonoBehaviour
@@ -6,6 +7,7 @@ public class Banana : MonoBehaviour
     private const float MaxVerticalSpeed = 5f;
     private Rigidbody2D _rb2d;
     public GameObject FinishGameMenuUI;
+    public static event Action OnGameOver;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -34,7 +36,8 @@ public class Banana : MonoBehaviour
             other.gameObject.GetComponent<Collider2D>().enabled = true;
         } else if (other.gameObject.CompareTag("Finish Line"))
         {
-            FinishGameMenuUI.SetActive(true);
+            GlobalStateManager.Instance.isGameOver = true;
+            OnGameOver?.Invoke();
             Time.timeScale = 0f;
         }
     }

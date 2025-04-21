@@ -7,6 +7,7 @@ namespace DefaultNamespace
         public static GlobalStateManager Instance { get; private set; }
         
         public GameMode gameMode = GameMode.SinglePlayer;
+        public bool isGameOver;
         public int selectedCharacterPlayer1;
         public int selectedCharacterPlayer2;
 
@@ -26,6 +27,7 @@ namespace DefaultNamespace
         public void ResetState()
         {
             gameMode = GameMode.SinglePlayer;
+            isGameOver = false;
             selectedCharacterPlayer1 = 0;
             selectedCharacterPlayer2 = 0;
         }
