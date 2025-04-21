@@ -33,15 +33,19 @@ namespace scene.racetrack
     
         void Update()
         {
-            var verticalInput1 = Input.GetAxisRaw("Vertical1");
-            var verticalInput2 = Input.GetAxisRaw("Vertical2");
-            if (verticalInput1 != 0 || verticalInput2 != 0)
+            var verticalInput1Keyboard = Input.GetAxisRaw("Vertical1Keyboard");
+            var verticalInput2Keyboard = Input.GetAxisRaw("Vertical2Keyboard");
+            var verticalInput1Controller = Input.GetAxisRaw("Vertical1Controller");
+            var verticalInput2Controller = Input.GetAxisRaw("Vertical2Controller");
+            if (verticalInput1Keyboard != 0 || verticalInput2Keyboard != 0 || verticalInput1Controller != 0 || verticalInput2Controller != 0)
             {
-                NavigateVertically(_isPlayer1Selecting, verticalInput1);
-                NavigateVertically(_isPlayer2Selecting, verticalInput2);
+                NavigateVertically(_isPlayer1Selecting, verticalInput1Keyboard);
+                NavigateVertically(_isPlayer2Selecting, verticalInput2Keyboard);
+                NavigateVertically(_isPlayer1Selecting, verticalInput1Controller);
+                NavigateVertically(_isPlayer1Selecting, verticalInput2Controller);
             }
-            _isPlayer1Selecting = verticalInput1 != 0;
-            _isPlayer2Selecting = verticalInput2 != 0;
+            _isPlayer1Selecting = verticalInput1Keyboard != 0 || verticalInput1Controller != 0;
+            _isPlayer2Selecting = verticalInput2Keyboard != 0 || verticalInput2Controller != 0;
     
             var isSubmit = Input.GetButton("Submit1") || Input.GetButton("Submit2");
             if (isSubmit)

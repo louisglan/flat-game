@@ -24,7 +24,7 @@ public class MenuManager : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick4Button7) || Input.GetKeyDown(KeyCode.Joystick8Button7))
         {
             OnEscapeKeyPressed();
         }

@@ -70,7 +70,8 @@ public class LoadScene : MonoBehaviour
         var player = Instantiate(characters[PlayerPrefs.GetInt($"selectedCharacterPlayer{playerNumber}")], spawnPosition, Quaternion.identity);
         var playerMovement = player.AddComponent<PlayerMovement>();
         _players.Add(player);
-        playerMovement.SetInputNameHorizontal($"Horizontal{playerNumber}");
+        playerMovement.InputNameHorizontalKeyboard = $"Horizontal{playerNumber}Keyboard";
+        playerMovement.InputNameHorizontalController = $"Horizontal{playerNumber}Controller";
         var banana = Instantiate(bananaPrefab, spawnPosition + new Vector3(0, 2f, 0), Quaternion.identity);
         var bananaScript = banana.AddComponent<Banana>();
         bananaScript.FinishGameMenuUI = FinishGameMenuUI;

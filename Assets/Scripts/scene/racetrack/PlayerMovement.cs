@@ -3,12 +3,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private readonly float _moveSpeed = 5f;
-    public string inputNameHorizontal;
+    public string InputNameHorizontalKeyboard { private get; set; }
+    public string InputNameHorizontalController { private get; set; }
 
     void Update()
     {
-        var moveHorizontal = Input.GetAxis(inputNameHorizontal);
-        var movement = new Vector3(moveHorizontal, 0, 0);
+        var moveHorizontalKeyboard = Input.GetAxis(InputNameHorizontalKeyboard);
+        var moveHorizontalController = Input.GetAxis(InputNameHorizontalController);
+        var movement = new Vector3(moveHorizontalController != 0 ? moveHorizontalController : moveHorizontalKeyboard, 0, 0);
         if (!IsLeavingBounds(movement))
         {
             transform.Translate(_moveSpeed * Time.deltaTime * movement);
@@ -20,10 +22,5 @@ public class PlayerMovement : MonoBehaviour
         float halfScreenWidth = 10.2f;
         return transform.position.x < -halfScreenWidth && movement.x < 0
                || transform.position.x > halfScreenWidth && movement.x > 0;
-    }
-
-    public void SetInputNameHorizontal(string inputName)
-    {
-        inputNameHorizontal = inputName;
     }
 }

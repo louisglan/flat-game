@@ -77,19 +77,21 @@ public class CharacterSelection : MonoBehaviour
         }
         foreach (var player in _players)
         {
-            var horizontalInput = Input.GetAxisRaw($"Horizontal{player.PlayerNumber}");
-            var verticalInput = Input.GetAxisRaw($"Vertical{player.PlayerNumber}");
+            var horizontalInputKeyboard = Input.GetAxisRaw($"Horizontal{player.PlayerNumber}Keyboard");
+            var horizontalInputController = Input.GetAxisRaw($"Horizontal{player.PlayerNumber}Controller");
+            var verticalInputKeyboard = Input.GetAxisRaw($"Vertical{player.PlayerNumber}Keyboard");
+            var verticalInputController = Input.GetAxisRaw($"Vertical{player.PlayerNumber}Controller");
             var isSubmit = Input.GetButton($"Submit{player.PlayerNumber}");
             if (isSubmit)
             {
                 Submit(player);
             }
-            if (horizontalInput != 0)
+            if (horizontalInputKeyboard != 0 || horizontalInputController != 0)
             {
-                ChangeHoveredCharacter(player, horizontalInput);
-            } else if (verticalInput != 0)
+                ChangeHoveredCharacter(player, horizontalInputController != 0 ? horizontalInputController : horizontalInputKeyboard);
+            } else if (verticalInputKeyboard != 0 || verticalInputController != 0)
             {
-                NavigateVertically(player, verticalInput);
+                NavigateVertically(player, verticalInputController != 0 ? verticalInputController : verticalInputKeyboard);
             } else
             {
                 player.IsSelecting = false;

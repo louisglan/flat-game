@@ -28,8 +28,9 @@ public class GameModeSelection : MonoBehaviour
 
     void Update()
     {
-        var verticalInput1 = Input.GetAxisRaw("Vertical1");
-        if (verticalInput1 != 0)
+        var verticalInput1Keyboard = Input.GetAxisRaw("Vertical1Keyboard");
+        var verticalInput1Controller = Input.GetAxisRaw("Vertical1Controller");
+        if (verticalInput1Keyboard != 0 || verticalInput1Controller != 0)
         {
             NavigateVertically();
             _isPlayer1Selecting = true;
