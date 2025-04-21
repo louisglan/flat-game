@@ -1,3 +1,4 @@
+using System;
 using DefaultNamespace;
 using DefaultNamespace.Utils;
 using UnityEngine;
@@ -8,14 +9,13 @@ public class GameModeSelection : MonoBehaviour
     public GameObject multiPlayerButton;
     private bool _isSinglePlayer = true;
     private bool _isPlayer1Selecting;
-    private MenuLoader _menuLoader;
     private bool _isSubmitting;
+    public static event Action OnGameModeSelection;
 
     
     void OnEnable()
     {
         Reset();
-        _menuLoader = GetComponent<MenuLoader>();
     }
 
     void Reset()
@@ -31,7 +31,7 @@ public class GameModeSelection : MonoBehaviour
         var verticalInput1 = Input.GetAxis("Vertical1");
         if (verticalInput1 != 0)
         {
-            NavigateVertically(verticalInput1);
+            NavigateVertically();
             _isPlayer1Selecting = true;
         }
         else
@@ -46,11 +46,13 @@ public class GameModeSelection : MonoBehaviour
         }
         if (isSubmit && !_isSubmitting)
         {
-            _menuLoader.LoadCharacterSelectionMenu(_isSinglePlayer);
+            OnGameModeSelection?.Invoke();
+            gameObject.SetActive(false);
+            GlobalStateManager.Instance.gameMode = _isSinglePlayer ? GameMode.SinglePlayer : GameMode.MultiPlayer;
         }
     }
 
-    void NavigateVertically(float verticalInput)
+    void NavigateVertically()
     {
         
         if (_isPlayer1Selecting)

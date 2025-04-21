@@ -4,7 +4,6 @@ using DefaultNamespace;
 using DefaultNamespace.Utils;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class CharacterSelection : MonoBehaviour
 {
@@ -19,12 +18,7 @@ public class CharacterSelection : MonoBehaviour
     private bool _isSinglePlayer;
     private int _startButtonPlayerCount = 0;
     private int _backButtonPlayerCount = 0;
-    private MenuLoader _menuLoader;
-
-    void Start()
-    {
-        _menuLoader = GetComponent<MenuLoader>();
-    }
+    public static event Action OnReturnToGameModeSelectionMenu;
     
     private void OnEnable()
     {
@@ -110,7 +104,6 @@ public class CharacterSelection : MonoBehaviour
             case 0:
             {
                 SceneManager.LoadScene("RaceTrack");
-//                Reset();
                 break;
             }
             case 1:
@@ -120,8 +113,7 @@ public class CharacterSelection : MonoBehaviour
             }
             case 2:
             {
-                _menuLoader.LoadGameModeMenu();
-//                Reset();
+                OnReturnToGameModeSelectionMenu?.Invoke();
                 break;
             }
             default: return;
