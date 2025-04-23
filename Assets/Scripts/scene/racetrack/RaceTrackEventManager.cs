@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class RaceTrackEventManager : MonoBehaviour
 {
-    public GameObject finishGameMenuUI;
+    [SerializeField] private GameObject finishGameMenuUI;
+    [SerializeField] private GameObject banannabelle;
 
     void OnEnable()
     {
-        Banana.OnGameOver += LoadFinishGameMenu;
+        BanannabelleAnimation.OnBanannabelleAnimationEnd += LoadFinishGameMenu;
     }
 
     void OnDisable()
     {
-        Banana.OnGameOver -= LoadFinishGameMenu;
+        BanannabelleAnimation.OnBanannabelleAnimationEnd -= LoadFinishGameMenu;
     }
 
     private void LoadFinishGameMenu()

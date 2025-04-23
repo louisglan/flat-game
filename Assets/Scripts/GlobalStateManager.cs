@@ -30,7 +30,7 @@ namespace DefaultNamespace
         {
             gameMode = GameMode.SinglePlayer;
             isGameOver = false;
-            highScore = 10000f;
+            if (highScore == 0f) highScore = 10000f;
             selectedCharacterPlayer1 = 0;
             selectedCharacterPlayer2 = 0;
         }
