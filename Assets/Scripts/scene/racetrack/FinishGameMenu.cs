@@ -11,6 +11,7 @@ namespace scene.racetrack
     public class FinishGameMenu : MonoBehaviour
     {
         public static event Action OnRestartGame;
+        public static event Action OnReturnToMenu;
         public TextMeshProUGUI playerScoreText;
         public TextMeshProUGUI highScoreText;
         [SerializeField] private GameObject mainMenuButtonGameObject;
@@ -60,8 +61,10 @@ namespace scene.racetrack
 
         private void Submit()
         {
+            MenuSubmitEvent.Trigger();
             if (_isMainMenuSelected)
             {
+                OnReturnToMenu?.Invoke();
                 SceneManager.LoadScene("MainMenu");
             }
             else

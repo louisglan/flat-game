@@ -55,6 +55,7 @@ namespace scene.racetrack
 
         private void Submit()
         {
+            MenuSubmitEvent.Trigger();
             if (_isMainMenuSelected)
             {
                 SceneManager.LoadScene("MainMenu");

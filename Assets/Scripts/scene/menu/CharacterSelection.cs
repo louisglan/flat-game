@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 
 public class CharacterSelection : MonoBehaviour
 {
-    public GameObject[] characters;
-    private List<Player> _players;
-    public GameObject player1StarPrefab;
-    public GameObject player2StarPrefab;
-    public GameObject startButton;
+    [SerializeField] private GameObject[] characters;
+    [SerializeField] private GameObject player1StarPrefab;
+    [SerializeField] private GameObject player2StarPrefab;
+    [SerializeField] private GameObject startButton;
+    [SerializeField] private GameObject backButton;
     private SpriteSwitcher _startButtonSpriteSwitcher;
-    public GameObject backButton;
+    private List<Player> _players;
     private SpriteSwitcher _backButtonSpriteSwitcher;
     private bool _isSinglePlayer;
     private int _startButtonPlayerCount = 0;
@@ -42,8 +42,6 @@ public class CharacterSelection : MonoBehaviour
     {
         _startButtonPlayerCount = 0;
         _backButtonPlayerCount = 0;
-//        _startButtonSpriteSwitcher.UseNormalSprite();
-//        _backButtonSpriteSwitcher.UseNormalSprite();
         foreach (var player in _players)
         {
             Destroy(player.Star);
@@ -101,6 +99,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void Submit(Player player)
     {
+        MenuSubmitEvent.Trigger();
         switch (player.VerticalPositionIndex)
         {
             case 0:

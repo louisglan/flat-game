@@ -48,6 +48,7 @@ public class GameModeSelection : MonoBehaviour
         if (isSubmit && !_isSubmitting)
         {
             GlobalStateManager.Instance.gameMode = _isSinglePlayer ? GameMode.SinglePlayer : GameMode.MultiPlayer;
+            MenuSubmitEvent.Trigger();
             OnGameModeSelection?.Invoke();
             gameObject.SetActive(false);
         }
